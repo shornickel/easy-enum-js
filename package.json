@@ -1,0 +1,19 @@
+{
+  "name": "enum-js",
+  "version": "0.0.1",
+  "description": "Simple module creating an enum class.",
+  "main": "enum.js",
+  "keywords": [
+    "enum",
+    "datatypes"
+  ],
+  "files": [
+    "enum.js"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/shornickel/enum-js.git"
+  },
+  "author": "Shawn Hornickel",
+  "license": "GPL-3.0"
+}
