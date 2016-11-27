@@ -1,14 +1,14 @@
 {
-  "name": "enum-js",
+  "name": "easy-enum-js",
   "version": "0.0.1",
   "description": "Simple module creating an enum class.",
-  "main": "enum.js",
+  "main": "easy-enum.js",
   "keywords": [
     "enum",
     "datatypes"
   ],
   "files": [
-    "enum.js"
+    "easy-enum.js"
   ],
   "repository": {
       "type": "git",
