@@ -12,7 +12,7 @@
   ],
   "repository": {
       "type": "git",
-      "url": "https://github.com/shornickel/enum-js.git"
+      "url": "https://github.com/shornickel/easy-enum-js.git"
   },
   "author": "Shawn Hornickel",
   "license": "GPL-3.0"
