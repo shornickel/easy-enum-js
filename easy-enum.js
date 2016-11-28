@@ -1,3 +1,5 @@
+'use strict'
+
 function uniq(a) {
     var prims = {"boolean":{}, "number":{}, "string":{}}, objs = [];
 
