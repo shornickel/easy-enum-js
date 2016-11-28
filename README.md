@@ -1,5 +1,5 @@
 # easy-enum-js
-A javascript ES6 enumeration class for nodejs.
+A javascript enumeration class for nodejs.
 
 ## Usage
 The module exports a class **Enum**. Instantiation is easy:
