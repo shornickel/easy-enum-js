@@ -14,7 +14,8 @@ function uniq(a) {
 
 class Enum {
   constructor() {
-    var args = uniq(arguments.sort());
+
+    var args = uniq(Array.from(arguments).sort());
     this.EKeys = [];
     this.length = args.length;
     for (var i = 0; i < args.length; i++) {
