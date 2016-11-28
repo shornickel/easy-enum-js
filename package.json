@@ -1,6 +1,6 @@
 {
   "name": "easy-enum-js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple module creating an enum class.",
   "main": "easy-enum.js",
   "keywords": [

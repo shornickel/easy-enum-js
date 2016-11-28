@@ -14,18 +14,18 @@ function uniq(a) {
 
 class Enum {
   constructor() {
-    let args = uniq(arguments.sort());
+    var args = uniq(arguments.sort());
     this.EKeys = [];
     this.length = args.length;
-    for (let i = 0; i < args.length; i++) {
+    for (var i = 0; i < args.length; i++) {
       this[String(args[i])] = i;
       this.EKeys.push(String(args[i]));
     }
   }
 
   toString() {
-    let RString = '{ ';
-    for (let i = 0; i < this.length; i++) {
+    var RString = '{ ';
+    for (var i = 0; i < this.length; i++) {
       RString = RString.concat(RString, this.EKeys[i], ': ', String(i), '; ');
     }
     RString = RString.concat(RString, '}');
@@ -34,8 +34,8 @@ class Enum {
   }
 
   toObject() {
-    let RObject = new Object(null);
-    for (let i = 0; i < this.length; i++) {
+    var RObject = new Object(null);
+    for (var i = 0; i < this.length; i++) {
       RObject[this.EKeys[i]] = i;
     }
 
