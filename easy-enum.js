@@ -48,3 +48,5 @@ class Enum {
     }
   }
 }
+
+module.exports = Enum;
