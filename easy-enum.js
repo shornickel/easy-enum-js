@@ -27,9 +27,9 @@ class Enum {
   toString() {
     var RString = '{ ';
     for (var i = 0; i < this.length; i++) {
-      RString = RString.concat(RString, this.EKeys[i], ': ', String(i), '; ');
+      RString += this.EKeys[i] + ': '+ String(i) + '; ';
     }
-    RString = RString.concat(RString, '}');
+    RString += RString + '}';
 
     return RString;
   }
