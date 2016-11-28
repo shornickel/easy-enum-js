@@ -1,5 +1,3 @@
-'use strict'
-
 function uniq(a) {
     var prims = {"boolean":{}, "number":{}, "string":{}}, objs = [];
 
@@ -12,45 +10,42 @@ function uniq(a) {
     });
 }
 
-class Enum {
-  constructor() {
+function Enum() {
+  var args = Array.from(arguments);
+  this.keys = uniq(args.sort());
 
-    var args = Array.from(arguments);
-    args = uniq(args.sort());
-
-    this.EKeys = [];
-    this.length = args.length;
-    for (var i = 0; i < args.length; i++) {
-      this[String(args[i])] = i;
-      this.EKeys.push(String(args[i]));
-    }
+  for (var i = 0; i < this.keys.length; i++) {
+    this[this.keys[i]] = i;
   }
 
-  toString() {
-    var RString = '{ ';
-    for (var i = 0; i < this.length; i++) {
-      RString += this.EKeys[i] + ': '+ String(i) + '; ';
-    }
-    RString += RString + '}';
+  return this;
+}
 
-    return RString;
+Enum.prototype.toString = function() {
+  var rString = "{ ";
+
+  for (var i = 0; i < this.keys.length; i++) {
+    rString += this.keys[i] + ": " + String(i) + "; ";
   }
 
-  toObject() {
-    var RObject = new Object(null);
-    for (var i = 0; i < this.length; i++) {
-      RObject[this.EKeys[i]] = i;
-    }
+  return rString + "}";
+}
 
-    return RObject;
+Enum.prototype.toObject = function() {
+  rObject = new Object(null);
+
+  for (var i = 0; i < this.keys.length; i++) {
+    rObject[this.keys[i]] = i;
   }
 
-  getVal(key) {
-    if (this[key]) {
-      return this[key];
-    } else {
-      return false;
-    }
+  return rObject;
+}
+
+Enum.prototype.getVal = function(key) {
+  if (this[key]) {
+    return this[key];
+  } else {
+    return false;
   }
 }
 
