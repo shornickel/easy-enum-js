@@ -22,13 +22,7 @@ function Enum() {
 }
 
 Enum.prototype.toString = function() {
-  var rString = "{ ";
-
-  for (var i = 0; i < this.keys.length; i++) {
-    rString += this.keys[i] + ": " + String(i) + "; ";
-  }
-
-  return rString + "}";
+  return JSON.stringify(this.toObject());
 }
 
 Enum.prototype.toObject = function() {
